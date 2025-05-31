@@ -6,7 +6,7 @@ pair<int, int> maxHistogram(vector<int>& height) {
     int max_area = 0;
     int width = 0, height_max = 0;
 
-    height.push_back(0); // sentinel to flush stack at the end
+    height.push_back(0);
     int n = height.size();
 
     for (int i = 0; i < n; ++i) {
@@ -43,7 +43,7 @@ void solveTest() {
         for (int j = 0; j < M; ++j)
             height[j] = (matrix[i][j] == 0) ? 0 : height[j] + 1;
 
-        pair<int, int> rect = maxHistogram(height); // không dùng structured bindings
+        pair<int, int> rect = maxHistogram(height);
         int w = rect.first;
         int h = rect.second;
         int area = w * h;

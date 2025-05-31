@@ -47,9 +47,6 @@ int main() {
             if (i < (int)res.size() - 1) cout << " ";
         }
         cout << "\n";
-
-        // Gi?i phóng b? nh? (tu? ch?n)
-        // có th? dùng hàm d? quy d? xóa cây n?u c?n
     }
     return 0;
 }

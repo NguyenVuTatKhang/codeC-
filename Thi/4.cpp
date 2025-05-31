@@ -32,7 +32,7 @@ int main() {
     }
 
     vector<bool> deleted(m + 1, false);
-    vector< vector< pair<int, int> > > queries(m + 2); // luu các truy v?n theo edge index
+    vector< vector< pair<int, int> > > queries(m + 2); 
 
     for (int i = 0; i < q; ++i) {
         int e, u;
@@ -41,13 +41,11 @@ int main() {
         deleted[e] = true;
     }
 
-    // Kh?i t?o Union-Find
     for (int i = 1; i <= n; ++i) {
         parent[i] = i;
         sz[i] = 1;
     }
 
-    // Thêm t?t c? các c?nh không b? xóa vào d? th?
     for (int i = 1; i <= m; ++i) {
         if (!deleted[i]) {
             int u = edge[i].first;
@@ -58,7 +56,6 @@ int main() {
 
     vector<int> result(q);
 
-    // Xét t? m -> 1, t?c là thêm l?i các c?nh dã b? xóa ngu?c th?i gian
     for (int i = m; i >= 1; --i) {
         for (size_t j = 0; j < queries[i].size(); ++j) {
             int idx = queries[i][j].first;
