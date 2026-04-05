@@ -1,0 +1,4 @@
+config BR2_PACKAGE_BBB_GPIO
+    bool "bbb_gpio"
+    help
+      GPIO, Button, LED library for BeagleBone Black.
